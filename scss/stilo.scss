@@ -1,0 +1,231 @@
+*{  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url(../Hello.ttf);
+@import"mixins";
+@import "variables";
+@import "contacto";
+
+%flex{
+    display: flex;
+    justify-content: center;
+}
+/*variables*/
+
+body{
+    position: relative;
+    
+}
+.encabezado{ 
+    width: 100%;
+    height: 42rem;
+    overflow: hidden;
+    @include fondo();
+        nav{
+            
+            #MH{
+                color: #76d1d0 ;
+                font-size: 15px;
+            }
+            #MHI{
+                color: #76d1d0 ;
+            }
+            #CL{
+                color:black;
+                width: max-content;
+            }
+            #CL:hover{
+                @include Titulos(8px 25px,15px );
+                font-family:Arial, Helvetica, sans-serif;
+                transition:ease-out 0.4s;
+                text-shadow: black 3px 2px;
+                transform: scale(1.2);
+                color: white;
+            }
+
+        }
+        div#D-empresa{
+            transition: ease-in-out 0.5s;
+            height:200px;
+            width: 100%;
+            margin-top: 10%;
+            @extend %flex;
+                h1{
+                    width:350px;
+                    height: 100px;
+                    @include Titulos(25px 30px,50px )
+                }
+                h1:hover{
+                    transform: scale(1.2);
+                    transition: ease-out 0.7s;
+                    color: #faf8f8;
+                    text-shadow: black 5px 2px;
+                }
+        }
+}
+main{
+    div.videosbg{
+        width:100%;
+        height:23rem;
+        overflow: hidden;
+        position: relative;
+        video{
+            width: 100%;
+            min-width:650px;
+            max-width:1050px ;
+            position: absolute;
+            left: 07vw;
+            top: -5vh;
+            opacity: 80%;
+        }
+    }
+    section{
+        
+        div#formu{
+            @extend %flex;
+            margin: 2px;
+            position: relative;
+            border-radius: 15px;
+            background-color: $colorG;
+            height: max-content;
+                form#FC{
+                    background-image: linear-gradient( white, white, #76d1d0 , #76d1d0);
+                    border-radius: 10px;
+                    box-shadow: rgba(80, 77, 77, 0.473) 10px 5px;
+                    width: 20rem;
+                    height: max-content;
+                    .mb-3{
+                        height: max-content;
+                    }
+                }
+                form#FC:hover{
+                    transform: scale(1.05);
+                    box-shadow: rgba(80, 77, 77, 0.301) 12px 7px;
+                    transition: ease-in-out 0.7s;
+                }
+        }
+        #etiqueta{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h5{
+                left:10vw;
+                top: 15vh;
+                @include subTitulos(30px 30px, 30px);
+                @include Animacion();
+            }
+            p{
+                left:10vw;
+                top: 30vh;
+                width:15vw;
+                transition: ease-in 0.5s;
+            }
+        }
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#fbbdbc, white, white);
+    text-align: center;
+    border-radius: 15px;
+    .redes{
+        position: fixed;
+        bottom: 70px;
+        right: 10px;
+        .f{
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            text-decoration: none;
+            padding: 1px;
+            padding-left: 10px;
+            padding-right: 2px;
+            background-color: #5a678b;
+            border-radius: 3px;
+            margin: 5px;
+        }
+        .f:hover{
+            @include hovered(blue)
+        }
+        .w{
+            @include redes(#6da17b)
+        }
+        .w:hover{
+            @include hovered(green)
+        }
+        .ins{
+            @include redes(#a16d67)
+        }
+        .ins:hover{
+            @include hovered(#a53fb3) 
+        }
+    }
+    .div__foot{
+            p{
+                font-size: 12px;
+            }
+    }
+
+}
+@media screen and (min-width:0px) and (max-width:678px){
+
+main{
+        
+section{
+    
+    #formu{
+        flex-direction: column;
+        justify-content: center;
+        max-height: max-content;
+    }
+    div#etiqueta{
+        height: max-content;
+        
+        h5{ 
+            margin-left: 20vw;
+            max-width: max-content;
+            justify-self: end;
+        }
+        p{
+            margin-left: 20vw;
+            width: 200px;
+            justify-self: end;
+        }
+        }
+    }
+    
+}
+div.c_etiq{
+    height: max-content;
+    
+    h5{ 
+        margin-left: 20vw;
+        max-width: max-content;
+        justify-self: end;
+    }
+    p{
+        margin-left: 20vw;
+        width: 200px;
+        justify-self: end;
+    }
+    }
+}
+video{
+    width: 100%;
+    min-width:650px;
+    max-width:1050px ;
+    position: absolute;
+    left: 0vw;
+    top: 0vh;
+    opacity: 80%;
+}
+
+
+
+
+
+
