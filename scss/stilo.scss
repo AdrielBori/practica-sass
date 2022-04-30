@@ -3,10 +3,16 @@
     margin: 0;
     box-sizing: border-box;
 }
-@import url(../Hello.ttf);
+@font-face {
+    font-family:honey;
+    src: url(../HoneyFlorist.ttf);
+}
+@font-face {
+    font-family:museo;
+    src: url(../Museo300.ttf);
+}
 @import"mixins";
 @import "variables";
-@import "contacto";
 
 %flex{
     display: flex;
@@ -37,14 +43,16 @@ body{
                 width: max-content;
             }
             #CL:hover{
-                @include Titulos(8px 25px,15px );
+                @include menu(8px 25px,15px );
                 font-family:Arial, Helvetica, sans-serif;
                 transition:ease-out 0.4s;
                 text-shadow: black 3px 2px;
                 transform: scale(1.2);
                 color: white;
             }
-
+        }
+        a.navbar-brand img{
+            opacity: 0.6;
         }
         div#D-empresa{
             transition: ease-in-out 0.5s;
@@ -55,7 +63,9 @@ body{
                 h1{
                     width:350px;
                     height: 100px;
-                    @include Titulos(25px 30px,50px )
+                    @include Titulos(25px 30px,60px );
+                    
+                    
                 }
                 h1:hover{
                     transform: scale(1.2);
@@ -82,16 +92,19 @@ main{
         }
     }
     section{
-        
+        background-image: url("../imagenes/Imagen1.png");
+        background-size: 80px;
         div#formu{
             @extend %flex;
             margin: 2px;
             position: relative;
             border-radius: 15px;
-            background-color: $colorG;
             height: max-content;
+            
+            
                 form#FC{
                     background-image: linear-gradient( white, white, #76d1d0 , #76d1d0);
+                    border: solid 0.5px;
                     border-radius: 10px;
                     box-shadow: rgba(80, 77, 77, 0.473) 10px 5px;
                     width: 20rem;
@@ -105,8 +118,22 @@ main{
                     box-shadow: rgba(80, 77, 77, 0.301) 12px 7px;
                     transition: ease-in-out 0.7s;
                 }
+                input#btnenv{
+                    background-color: #fbbdbc;
+                    border-radius: 5px;
+                    font-family: museo;
+                }
+                input#btnrest{
+                    background-color: #fbbdbc;
+                    border-radius: 5px;
+                    font-family: museo;
+                }
+
+
+
         }
         #etiqueta{
+            margin-left: 15px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -114,7 +141,8 @@ main{
             h5{
                 left:10vw;
                 top: 15vh;
-                @include subTitulos(30px 30px, 30px);
+                margin: 0;
+                @include subTitulos(20px 25px, 30px);
                 @include Animacion();
             }
             p{
@@ -122,6 +150,8 @@ main{
                 top: 30vh;
                 width:15vw;
                 transition: ease-in 0.5s;
+                font-family:museo;
+                text-align:center;
             }
         }
     }
@@ -186,12 +216,12 @@ section{
         height: max-content;
         
         h5{ 
-            margin-left: 20vw;
+            margin-left: 1vw;
             max-width: max-content;
             justify-self: end;
         }
         p{
-            margin-left: 20vw;
+            margin-left: 1vw;
             width: 200px;
             justify-self: end;
         }

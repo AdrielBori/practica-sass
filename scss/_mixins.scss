@@ -1,12 +1,12 @@
 @keyframes ani1° {
     0%{transform: scale(1);}
-    20%{transform: scale(1.05);}
-    30%{ransform: scale(1.08);}
-    40%{ransform: scale(1.1);}
-    50%{transform: scale(1.2);color: #ffff;text-shadow: black 5px 2px;}
-    60%{ransform: scale(1.1);}
-    70%{ransform: scale(1.08);}
-    80%{transform: scale(1.05);}
+    20%{transform: scale(1.03);}
+    30%{ransform: scale(1.05);}
+    40%{ransform: scale(1);}
+    50%{transform: scale(1.1);color: #6d6d6d;}
+    60%{ransform: scale(1);}
+    70%{ransform: scale(1.05);}
+    80%{transform: scale(1.03);}
     100%{transform: scale(1);}
 }
 @mixin redes($Bg) {
@@ -40,6 +40,16 @@
         font-size: $Tam;
         font-family:$letra;
 }
+@mixin menu ($pad,$Tam) {
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+    text-align: center;
+    background-image:url("../imagenes/r4.png");
+    padding: $pad;
+    font-size: $Tam;
+    font-family:$letra;
+}
 @mixin subTitulos ($pad,$Tam) {
     background-size:contain;
     background-position:center;
@@ -51,11 +61,10 @@
     font-family:$letra;
 }
 @mixin Animacion {
-    transition: ease-in 0.5s;
+transition: ease-in 0.5s;
 animation-name: ani1°;
 animation-duration: 10s;
 animation-delay: 2s;
 animation-timing-function:linear;
 animation-iteration-count: infinite;
-    
 }
