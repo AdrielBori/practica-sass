@@ -59,19 +59,20 @@ body {
     color: black;
     width: max-content; }
   .encabezado nav #CL:hover {
-    background-size: contain;
+    background-size: 0px;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    background-image: url("../imagenes/r4.png");
-    padding: 8px 25px;
+    background-image: url("../imagenes/acuarela.png");
+    padding: 15px 30px;
     font-size: 15px;
     font-family: honey;
     font-family: Arial, Helvetica, sans-serif;
-    transition: ease-out 0.4s;
+    transition: ease-out 0.5s;
     text-shadow: black 3px 2px;
     transform: scale(1.2);
-    color: white; }
+    color: white;
+    background-size: contain; }
   .encabezado a.navbar-brand img {
     opacity: 0.6; }
   .encabezado #D-empresa {
@@ -95,6 +96,10 @@ body {
       transition: ease-out 0.7s;
       color: #faf8f8;
       text-shadow: black 5px 2px; }
+
+.maxc {
+  height: max-content;
+  height: 50rem; }
 
 /*-----------------------------------*/
 main.mainindex div.videosbg {
@@ -163,6 +168,9 @@ section {
         transition: ease-in 0.5s;
         font-family: museo;
         text-align: center; }
+
+.cwhite {
+  color: #9c9a9a; }
 
 /*----------------------*/
 footer {
@@ -233,7 +241,74 @@ footer {
 .sec_cont {
   background-image: none; }
 
+/*------------------------*/
+header.enc_nts {
+  height: 37rem;
+  background-image: url("../imagenes/colage.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed; }
+  header.enc_nts nav #MH {
+    color: #76d1d0;
+    font-size: 15px; }
+  header.enc_nts nav #MHI {
+    color: #76d1d0; }
+  header.enc_nts nav #CL {
+    color: black;
+    width: max-content; }
+  header.enc_nts nav #CL:hover {
+    background-size: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-image: url("../imagenes/acuarela.png");
+    padding: 12px 18px;
+    font-size: 15px;
+    font-family: honey;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: ease-out 0.5s;
+    text-shadow: black 3px 2px;
+    transform: scale(1.2);
+    color: white;
+    background-size: contain; }
+
+main.main_nts section.sec_nts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+  background-image: linear-gradient(white, white, #f1aaaa);
+  height: 562px; }
+  main.main_nts section.sec_nts img {
+    border-radius: 15px; }
+  main.main_nts section.sec_nts h5 {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-image: url("../imagenes/tr.png");
+    padding: 30px 35px;
+    font-size: 80px;
+    font-family: honey;
+    transition: ease-in 0.5s;
+    animation-name: ani1°;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; }
+  main.main_nts section.sec_nts p {
+    height: 350px;
+    width: 25vw;
+    min-width: 200px;
+    transition: ease-in 0.5s;
+    font-family: museo;
+    text-align: center; }
+
 /*--------------------------------*/
 @media screen and (min-width: 0px) and (max-width: 678px) {
   div#formu {
-    flex-direction: column; } }
+    flex-direction: column; }
+  header.enc_nts {
+    background-size: 660px; } }

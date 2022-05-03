@@ -39,12 +39,13 @@ body{
             width: max-content;
         }
         #CL:hover{
-            @include menu(8px 25px,15px );
+            @include menu(15px 30px,15px );
             font-family:Arial, Helvetica, sans-serif;
-            transition:ease-out 0.4s;
+            transition:ease-out 0.5s;
             text-shadow: black 3px 2px;
             transform: scale(1.2);
             color: white;
+            background-size: contain;
         }
     }
     a.navbar-brand img{
@@ -68,6 +69,10 @@ body{
                     text-shadow: black 5px 2px;
                 }
     }
+}
+.maxc{
+    height: max-content;
+    height: 50rem;
 }
 /*-----------------------------------*/
 main.mainindex{
@@ -135,6 +140,9 @@ section{
         }
     }
 } 
+.cwhite{
+    color: rgb(156, 154, 154);
+}
 /*----------------------*/
 footer{
     display: flex;
@@ -180,9 +188,68 @@ footer{
 }
 .sec_cont{
     background-image: none;
-
-
 }
+/*------------------------*/
+header.enc_nts{
+    height: 37rem;
+    background-image: url("../imagenes/colage.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    background-attachment:fixed;
+    nav{
+            
+        #MH{
+            color: #76d1d0 ;
+            font-size: 15px;
+        }
+        #MHI{
+            color: #76d1d0 ;
+        }
+        #CL{
+            color:black;
+            width: max-content;
+        }
+        #CL:hover{
+            @include menu(12px 18px,15px );
+            font-family:Arial, Helvetica, sans-serif;
+            transition:ease-out 0.5s;
+            text-shadow: black 3px 2px;
+            transform: scale(1.2);
+            color: white;
+            background-size: contain;
+        }
+    }
+}
+main.main_nts{
+
+    section.sec_nts{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 15px;
+        background-image: linear-gradient(white ,white, #f1aaaa);
+        height: 562px;
+            img{
+                border-radius: 15px;
+            }
+            h5{
+                @include subTitulos(30px 35px, 80px);
+                @include Animacion();
+            }
+            p{
+                height: 350px;
+                width:25vw;
+                min-width: 200px;
+                transition: ease-in 0.5s;
+                font-family:museo;
+                text-align:center;
+            }
+    }
+}
+
+
 
 
 
@@ -190,5 +257,9 @@ footer{
 @media screen and (min-width:0px) and (max-width:678px){
     div#formu{
         flex-direction: column;
+    }
+    header.enc_nts{
+        background-size: 660px;
+
     }
 }

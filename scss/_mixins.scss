@@ -27,8 +27,6 @@
         width: 45px;
         transition:ease-out 0.3s;
         margin: 7px;
-        
-        
     }
     
 }
@@ -50,11 +48,11 @@
         font-family:$letra;
 }
 @mixin menu ($pad,$Tam) {
-    background-size:contain;
+    background-size:0px;
     background-position:center;
     background-repeat:no-repeat;
     text-align: center;
-    background-image:url("../imagenes/r4.png");
+    background-image:url("../imagenes/acuarela.png");
     padding: $pad;
     font-size: $Tam;
     font-family:$letra;
