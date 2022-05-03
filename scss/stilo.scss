@@ -1,6 +1,5 @@
-*{  
+*{margin: 0;
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
 @font-face {
@@ -13,49 +12,46 @@
 }
 @import"mixins";
 @import "variables";
-
 %flex{
     display: flex;
     justify-content: center;
 }
-/*variables*/
-
 body{
     position: relative;
-    
 }
+/*-------------------------------------*/
 .encabezado{ 
     width: 100%;
     height: 42rem;
     overflow: hidden;
     @include fondo();
-        nav{
+    nav{
             
-            #MH{
-                color: #76d1d0 ;
-                font-size: 15px;
-            }
-            #MHI{
-                color: #76d1d0 ;
-            }
-            #CL{
-                color:black;
-                width: max-content;
-            }
-            #CL:hover{
-                @include menu(8px 25px,15px );
-                font-family:Arial, Helvetica, sans-serif;
-                transition:ease-out 0.4s;
-                text-shadow: black 3px 2px;
-                transform: scale(1.2);
-                color: white;
-            }
+        #MH{
+            color: #76d1d0 ;
+            font-size: 15px;
         }
-        a.navbar-brand img{
-            opacity: 0.6;
+        #MHI{
+            color: #76d1d0 ;
         }
-        div#D-empresa{
-            transition: ease-in-out 0.5s;
+        #CL{
+            color:black;
+            width: max-content;
+        }
+        #CL:hover{
+            @include menu(8px 25px,15px );
+            font-family:Arial, Helvetica, sans-serif;
+            transition:ease-out 0.4s;
+            text-shadow: black 3px 2px;
+            transform: scale(1.2);
+            color: white;
+        }
+    }
+    a.navbar-brand img{
+        opacity: 0.6;
+    }
+    #D-empresa{
+        transition: ease-in-out 0.5s;
             height:200px;
             width: 100%;
             margin-top: 10%;
@@ -64,8 +60,6 @@ body{
                     width:350px;
                     height: 100px;
                     @include Titulos(25px 30px,60px );
-                    
-                    
                 }
                 h1:hover{
                     transform: scale(1.2);
@@ -73,9 +67,10 @@ body{
                     color: #faf8f8;
                     text-shadow: black 5px 2px;
                 }
-        }
+    }
 }
-main{
+/*-----------------------------------*/
+main.mainindex{
     div.videosbg{
         width:100%;
         height:23rem;
@@ -86,77 +81,61 @@ main{
             min-width:650px;
             max-width:1050px ;
             position: absolute;
-            left: 07vw;
+            left: 05vw;
             top: -5vh;
             opacity: 80%;
         }
     }
-    section{
-        background-image: url("../imagenes/Imagen1.png");
-        background-size: 80px;
-        div#formu{
-            @extend %flex;
-            margin: 2px;
-            position: relative;
-            border-radius: 15px;
+}
+section{
+    width: 100vw;
+    height: max-content;
+    background-image: url("../imagenes/Imagen1.png");
+    background-size: 80px;
+    div#formu{
+        @extend %flex;
+        margin: 2px;
+        border-radius: 15px;
+        form#FC{
+            background-image: linear-gradient( white, white, #76d1d0 , #76d1d0);
+            border: solid 0.5px;
+            border-radius: 10px;
+            box-shadow: rgba(80, 77, 77, 0.473) 10px 5px;
+            width: 20rem;
+            min-width:280px;
             height: max-content;
-            
-            
-                form#FC{
-                    background-image: linear-gradient( white, white, #76d1d0 , #76d1d0);
-                    border: solid 0.5px;
-                    border-radius: 10px;
-                    box-shadow: rgba(80, 77, 77, 0.473) 10px 5px;
-                    width: 20rem;
-                    height: max-content;
-                    .mb-3{
-                        height: max-content;
-                    }
-                }
-                form#FC:hover{
-                    transform: scale(1.05);
-                    box-shadow: rgba(80, 77, 77, 0.301) 12px 7px;
-                    transition: ease-in-out 0.7s;
-                }
-                input#btnenv{
-                    background-color: #fbbdbc;
-                    border-radius: 5px;
-                    font-family: museo;
-                }
-                input#btnrest{
-                    background-color: #fbbdbc;
-                    border-radius: 5px;
-                    font-family: museo;
-                }
-
-
-
+            }
+        form#FC:hover{
+            transform: scale(1.05);
+            box-shadow: rgba(80, 77, 77, 0.301) 12px 7px;
+            transition: ease-in-out 0.7s;
         }
-        #etiqueta{
+        div#etiqueta{
             margin-left: 15px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 300px;
             h5{
-                left:10vw;
+                margin-left: 40px;
                 top: 15vh;
                 margin: 0;
                 @include subTitulos(20px 25px, 30px);
                 @include Animacion();
             }
             p{
-                left:10vw;
+                margin-left: 40px;
                 top: 30vh;
-                width:15vw;
+                width:25vw;
                 transition: ease-in 0.5s;
                 font-family:museo;
                 text-align:center;
             }
         }
     }
-}
-
+} 
+/*----------------------*/
 footer{
     display: flex;
     flex-direction: column;
@@ -168,94 +147,48 @@ footer{
         bottom: 70px;
         right: 10px;
         .f{
-            color: rgb(255, 255, 255);
-            font-size: 30px;
-            text-decoration: none;
-            padding: 1px;
-            padding-left: 10px;
-            padding-right: 2px;
-            background-color: #5a678b;
-            border-radius: 3px;
-            margin: 5px;
+            @include redes;
+            background-image: url("../imagenes/fonicof.png");
         }
         .f:hover{
-            @include hovered(blue)
+            @include hovered();
+            filter: invert(18%) sepia(30%) saturate(3448%) hue-rotate(217deg) brightness(85%) contrast(99%);
         }
+        color:#a1458d;
         .w{
-            @include redes(#6da17b)
+            @include redes;
+            background-image: url("../imagenes/fonicw.png");
         }
         .w:hover{
-            @include hovered(green)
+            @include hovered();
+            filter: invert(43%) sepia(14%) saturate(1351%) hue-rotate(71deg) brightness(109%) contrast(103%);
         }
         .ins{
-            @include redes(#a16d67)
+            @include redes;
+            background-image: url("../imagenes/fonicoi.png");
         }
         .ins:hover{
-            @include hovered(#a53fb3) 
+            @include hovered();
+            filter: invert(38%) sepia(13%) saturate(3731%) hue-rotate(266deg) brightness(85%) contrast(81%);
         }
     }
     .div__foot{
-            p{
-                font-size: 12px;
-            }
-    }
-
-}
-@media screen and (min-width:0px) and (max-width:678px){
-
-main{
-        
-section{
-    
-    #formu{
-        flex-direction: column;
-        justify-content: center;
-        max-height: max-content;
-    }
-    div#etiqueta{
-        height: max-content;
-        
-        h5{ 
-            margin-left: 1vw;
-            max-width: max-content;
-            justify-self: end;
-        }
         p{
-            margin-left: 1vw;
-            width: 200px;
-            justify-self: end;
-        }
+            font-size: 12px;
         }
     }
-    
 }
-div.c_etiq{
-    height: max-content;
-    
-    h5{ 
-        margin-left: 20vw;
-        max-width: max-content;
-        justify-self: end;
-    }
-    p{
-        margin-left: 20vw;
-        width: 200px;
-        justify-self: end;
-    }
-    }
-}
-video{
-    width: 100%;
-    min-width:650px;
-    max-width:1050px ;
-    position: absolute;
-    left: 0vw;
-    top: 0vh;
-    opacity: 80%;
+.sec_cont{
+    background-image: none;
+
+
 }
 
 
 
-
-
-
+/*--------------------------------*/
+@media screen and (min-width:0px) and (max-width:678px){
+    div#formu{
+        flex-direction: column;
+    }
+}

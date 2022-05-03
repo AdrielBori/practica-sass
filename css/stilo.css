@@ -1,7 +1,7 @@
 @charset "UTF-8";
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box; }
 
 @font-face {
@@ -33,14 +33,14 @@
   100% {
     transform: scale(1); } }
 
-.encabezado div#D-empresa, main section div#formu {
+.encabezado #D-empresa, section div#formu {
   display: flex;
   justify-content: center; }
 
-/*variables*/
 body {
   position: relative; }
 
+/*-------------------------------------*/
 .encabezado {
   width: 100%;
   height: 42rem;
@@ -74,12 +74,12 @@ body {
     color: white; }
   .encabezado a.navbar-brand img {
     opacity: 0.6; }
-  .encabezado div#D-empresa {
+  .encabezado #D-empresa {
     transition: ease-in-out 0.5s;
     height: 200px;
     width: 100%;
     margin-top: 10%; }
-    .encabezado div#D-empresa h1 {
+    .encabezado #D-empresa h1 {
       width: 350px;
       height: 100px;
       background-size: contain;
@@ -90,87 +90,81 @@ body {
       padding: 25px 30px;
       font-size: 60px;
       font-family: honey; }
-    .encabezado div#D-empresa h1:hover {
+    .encabezado #D-empresa h1:hover {
       transform: scale(1.2);
       transition: ease-out 0.7s;
       color: #faf8f8;
       text-shadow: black 5px 2px; }
 
-main div.videosbg {
+/*-----------------------------------*/
+main.mainindex div.videosbg {
   width: 100%;
   height: 23rem;
   overflow: hidden;
   position: relative; }
-  main div.videosbg video {
+  main.mainindex div.videosbg video {
     width: 100%;
     min-width: 650px;
     max-width: 1050px;
     position: absolute;
-    left: 07vw;
+    left: 05vw;
     top: -5vh;
     opacity: 80%; }
 
-main section {
+section {
+  width: 100vw;
+  height: max-content;
   background-image: url("../imagenes/Imagen1.png");
   background-size: 80px; }
-  main section div#formu {
+  section div#formu {
     margin: 2px;
-    position: relative;
-    border-radius: 15px;
-    height: max-content; }
-    main section div#formu form#FC {
+    border-radius: 15px; }
+    section div#formu form#FC {
       background-image: linear-gradient(white, white, #76d1d0, #76d1d0);
       border: solid 0.5px;
       border-radius: 10px;
       box-shadow: rgba(80, 77, 77, 0.473) 10px 5px;
       width: 20rem;
+      min-width: 280px;
       height: max-content; }
-      main section div#formu form#FC .mb-3 {
-        height: max-content; }
-    main section div#formu form#FC:hover {
+    section div#formu form#FC:hover {
       transform: scale(1.05);
       box-shadow: rgba(80, 77, 77, 0.301) 12px 7px;
       transition: ease-in-out 0.7s; }
-    main section div#formu input#btnenv {
-      background-color: #fbbdbc;
-      border-radius: 5px;
-      font-family: museo; }
-    main section div#formu input#btnrest {
-      background-color: #fbbdbc;
-      border-radius: 5px;
-      font-family: museo; }
-  main section #etiqueta {
-    margin-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    main section #etiqueta h5 {
-      left: 10vw;
-      top: 15vh;
-      margin: 0;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      text-align: center;
-      background-image: url("../imagenes/tr.png");
-      padding: 20px 25px;
-      font-size: 30px;
-      font-family: honey;
-      transition: ease-in 0.5s;
-      animation-name: ani1°;
-      animation-duration: 10s;
-      animation-delay: 2s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite; }
-    main section #etiqueta p {
-      left: 10vw;
-      top: 30vh;
-      width: 15vw;
-      transition: ease-in 0.5s;
-      font-family: museo;
-      text-align: center; }
+    section div#formu div#etiqueta {
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px; }
+      section div#formu div#etiqueta h5 {
+        margin-left: 40px;
+        top: 15vh;
+        margin: 0;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        background-image: url("../imagenes/tr.png");
+        padding: 20px 25px;
+        font-size: 30px;
+        font-family: honey;
+        transition: ease-in 0.5s;
+        animation-name: ani1°;
+        animation-duration: 10s;
+        animation-delay: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; }
+      section div#formu div#etiqueta p {
+        margin-left: 40px;
+        top: 30vh;
+        width: 25vw;
+        transition: ease-in 0.5s;
+        font-family: museo;
+        text-align: center; }
 
+/*----------------------*/
 footer {
   display: flex;
   flex-direction: column;
@@ -180,79 +174,66 @@ footer {
   footer .redes {
     position: fixed;
     bottom: 70px;
-    right: 10px; }
+    right: 10px;
+    color: #a1458d; }
     footer .redes .f {
-      color: white;
-      font-size: 30px;
-      text-decoration: none;
-      padding: 1px;
-      padding-left: 10px;
-      padding-right: 2px;
-      background-color: #5a678b;
-      border-radius: 3px;
-      margin: 5px; }
+      margin-right: 10px;
+      padding: 20px;
+      background-position: center;
+      background-size: 80px;
+      background-repeat: no-repeat;
+      background-image: url("../imagenes/fonicof.png"); }
+      footer .redes .f img {
+        margin: 20px; }
     footer .redes .f:hover {
-      transform: scale(1.3);
-      background-color: blue;
-      transition: ease-in 0.2s; }
+      background-size: 0px;
+      transition: ease-out 0.7s;
+      filter: invert(18%) sepia(30%) saturate(3448%) hue-rotate(217deg) brightness(85%) contrast(99%); }
+      footer .redes .f:hover img:hover {
+        width: 45px;
+        transition: ease-out 0.3s;
+        margin: 7px; }
     footer .redes .w {
-      color: white;
-      font-size: 25px;
-      text-decoration: none;
-      padding: 5px;
-      background-color: #6da17b;
-      border-radius: 3px;
-      margin: 3px; }
+      margin-right: 10px;
+      padding: 20px;
+      background-position: center;
+      background-size: 80px;
+      background-repeat: no-repeat;
+      background-image: url("../imagenes/fonicw.png"); }
+      footer .redes .w img {
+        margin: 20px; }
     footer .redes .w:hover {
-      transform: scale(1.3);
-      background-color: green;
-      transition: ease-in 0.2s; }
+      background-size: 0px;
+      transition: ease-out 0.7s;
+      filter: invert(43%) sepia(14%) saturate(1351%) hue-rotate(71deg) brightness(109%) contrast(103%); }
+      footer .redes .w:hover img:hover {
+        width: 45px;
+        transition: ease-out 0.3s;
+        margin: 7px; }
     footer .redes .ins {
-      color: white;
-      font-size: 25px;
-      text-decoration: none;
-      padding: 5px;
-      background-color: #a16d67;
-      border-radius: 3px;
-      margin: 3px; }
+      margin-right: 10px;
+      padding: 20px;
+      background-position: center;
+      background-size: 80px;
+      background-repeat: no-repeat;
+      background-image: url("../imagenes/fonicoi.png"); }
+      footer .redes .ins img {
+        margin: 20px; }
     footer .redes .ins:hover {
-      transform: scale(1.3);
-      background-color: #a53fb3;
-      transition: ease-in 0.2s; }
+      background-size: 0px;
+      transition: ease-out 0.7s;
+      filter: invert(38%) sepia(13%) saturate(3731%) hue-rotate(266deg) brightness(85%) contrast(81%); }
+      footer .redes .ins:hover img:hover {
+        width: 45px;
+        transition: ease-out 0.3s;
+        margin: 7px; }
   footer .div__foot p {
     font-size: 12px; }
 
-@media screen and (min-width: 0px) and (max-width: 678px) {
-  main section #formu {
-    flex-direction: column;
-    justify-content: center;
-    max-height: max-content; }
-  main section div#etiqueta {
-    height: max-content; }
-    main section div#etiqueta h5 {
-      margin-left: 1vw;
-      max-width: max-content;
-      justify-self: end; }
-    main section div#etiqueta p {
-      margin-left: 1vw;
-      width: 200px;
-      justify-self: end; }
-  div.c_etiq {
-    height: max-content; }
-    div.c_etiq h5 {
-      margin-left: 20vw;
-      max-width: max-content;
-      justify-self: end; }
-    div.c_etiq p {
-      margin-left: 20vw;
-      width: 200px;
-      justify-self: end; } }
+.sec_cont {
+  background-image: none; }
 
-video {
-  width: 100%;
-  min-width: 650px;
-  max-width: 1050px;
-  position: absolute;
-  left: 0vw;
-  top: 0vh;
-  opacity: 80%; }
+/*--------------------------------*/
+@media screen and (min-width: 0px) and (max-width: 678px) {
+  div#formu {
+    flex-direction: column; } }
