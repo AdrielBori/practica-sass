@@ -1,4 +1,17 @@
 $colorG:#6d6d6d;
 $colorR:#fbbdbc;
 $colorC:#76d1d0;
-$letra:hello;
+$letra:honey;
+$letraSub:museo;
+
+$color-pages:(
+    rosa: #fbbdbc,
+    gris: #6d6d6d,
+    celeste: #76d1d0
+);
+
+@each $colorpage, $color in $color-pages {
+    .bas-#{$colorpage}{
+        color:$color
+    }
+}
