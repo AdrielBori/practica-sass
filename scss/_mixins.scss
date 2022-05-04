@@ -10,14 +10,15 @@
     100%{transform: scale(1);}
 }
 @mixin redes() {
-            margin-right: 10px;
-            padding:20px;
+            margin-right:0px;
+            padding:20px 5px;
             background-position: center;
             background-size:80px;
             background-repeat: no-repeat;
             img{
                 margin:20px;
             }
+            
             
 }
 @mixin hovered (){
@@ -52,6 +53,7 @@
     background-position:center;
     background-repeat:no-repeat;
     text-align: center;
+    margin-right: 5px;
     background-image:url("../imagenes/acuarela.png");
     padding: $pad;
     font-size: $Tam;
@@ -74,4 +76,33 @@ animation-duration: 10s;
 animation-delay: 2s;
 animation-timing-function:linear;
 animation-iteration-count: infinite;
+}
+@mixin nav-menu {
+    nav{
+        #MH{
+            color: #76d1d0 ;
+            font-size: 15px;
+        }
+        #MHI{
+            color: #76d1d0 ;
+        }
+        #CL{
+            color:black;
+            width: max-content;
+            margin-right:25px;
+        }
+        #CL:hover{
+            @include menu(15px 30px,15px );
+            font-family:Arial, Helvetica, sans-serif;
+            transition:ease-out 0.5s;
+            text-shadow: black 3px 2px;
+            transform: scale(1.2);
+            color: white;
+            background-size: contain;
+        }
+    }
+}
+@mixin transform ($scl,$Time) {
+    transform: scale($scl);
+    transition: ease-out $Time;
 }

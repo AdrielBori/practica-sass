@@ -33,14 +33,30 @@
   100% {
     transform: scale(1); } }
 
-.encabezado #D-empresa, section div#formu {
+.bas-rosa {
+  color: #fbbdbc; }
+
+.bas-gris {
+  color: #6d6d6d; }
+
+.bas-celeste {
+  color: #76d1d0; }
+
+#D-empresa, section div#formu {
   display: flex;
   justify-content: center; }
+
+section, .main__galeria, main.main_ser .tarjetas {
+  background-image: url("../imagenes/Imagen1.png");
+  background-size: 80px; }
 
 body {
   position: relative; }
 
-/*-------------------------------------*/
+p {
+  font-family: museo; }
+
+/*---------ENCABEZADO GRAL-------------*/
 .encabezado {
   width: 100%;
   height: 42rem;
@@ -57,12 +73,14 @@ body {
     color: #76d1d0; }
   .encabezado nav #CL {
     color: black;
-    width: max-content; }
+    width: max-content;
+    margin-right: 25px; }
   .encabezado nav #CL:hover {
     background-size: 0px;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    margin-right: 5px;
     background-image: url("../imagenes/acuarela.png");
     padding: 15px 30px;
     font-size: 15px;
@@ -73,35 +91,37 @@ body {
     transform: scale(1.2);
     color: white;
     background-size: contain; }
-  .encabezado a.navbar-brand img {
-    opacity: 0.6; }
-  .encabezado #D-empresa {
-    transition: ease-in-out 0.5s;
-    height: 200px;
-    width: 100%;
-    margin-top: 10%; }
-    .encabezado #D-empresa h1 {
-      width: 350px;
-      height: 100px;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      text-align: center;
-      background-image: url("../imagenes/tr.png");
-      padding: 25px 30px;
-      font-size: 60px;
-      font-family: honey; }
-    .encabezado #D-empresa h1:hover {
-      transform: scale(1.2);
-      transition: ease-out 0.7s;
-      color: #faf8f8;
-      text-shadow: black 5px 2px; }
+
+a.navbar-brand img {
+  opacity: 0.6; }
+
+#D-empresa {
+  transition: ease-in-out 0.5s;
+  height: 200px;
+  width: 100%;
+  margin-top: 10%; }
+  #D-empresa h1 {
+    width: 350px;
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-image: url("../imagenes/tr.png");
+    padding: 25px 30px;
+    font-size: 60px;
+    font-family: honey; }
+  #D-empresa h1:hover {
+    transform: scale(1.2);
+    transition: ease-out 0.7s;
+    color: #faf8f8;
+    text-shadow: black 5px 2px; }
 
 .maxc {
   height: max-content;
   height: 50rem; }
 
-/*-----------------------------------*/
+/*---------PRINCIPAL INDEX-------------*/
 main.mainindex div.videosbg {
   width: 100%;
   height: 23rem;
@@ -118,9 +138,7 @@ main.mainindex div.videosbg {
 
 section {
   width: 100vw;
-  height: max-content;
-  background-image: url("../imagenes/Imagen1.png");
-  background-size: 80px; }
+  height: max-content; }
   section div#formu {
     margin: 2px;
     border-radius: 15px; }
@@ -166,13 +184,12 @@ section {
         top: 30vh;
         width: 25vw;
         transition: ease-in 0.5s;
-        font-family: museo;
         text-align: center; }
 
 .cwhite {
   color: #9c9a9a; }
 
-/*----------------------*/
+/*------PIE DE PAGINA-------*/
 footer {
   display: flex;
   flex-direction: column;
@@ -182,11 +199,11 @@ footer {
   footer .redes {
     position: fixed;
     bottom: 70px;
-    right: 10px;
+    right: 5px;
     color: #a1458d; }
     footer .redes .f {
-      margin-right: 10px;
-      padding: 20px;
+      margin-right: 0px;
+      padding: 20px 5px;
       background-position: center;
       background-size: 80px;
       background-repeat: no-repeat;
@@ -202,8 +219,8 @@ footer {
         transition: ease-out 0.3s;
         margin: 7px; }
     footer .redes .w {
-      margin-right: 10px;
-      padding: 20px;
+      margin-right: 0px;
+      padding: 20px 5px;
       background-position: center;
       background-size: 80px;
       background-repeat: no-repeat;
@@ -219,8 +236,8 @@ footer {
         transition: ease-out 0.3s;
         margin: 7px; }
     footer .redes .ins {
-      margin-right: 10px;
-      padding: 20px;
+      margin-right: 0px;
+      padding: 20px 5px;
       background-position: center;
       background-size: 80px;
       background-repeat: no-repeat;
@@ -241,7 +258,7 @@ footer {
 .sec_cont {
   background-image: none; }
 
-/*------------------------*/
+/*-----NOSOTROS--------*/
 header.enc_nts {
   height: 37rem;
   background-image: url("../imagenes/colage.png");
@@ -256,14 +273,16 @@ header.enc_nts {
     color: #76d1d0; }
   header.enc_nts nav #CL {
     color: black;
-    width: max-content; }
+    width: max-content;
+    margin-right: 25px; }
   header.enc_nts nav #CL:hover {
     background-size: 0px;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    margin-right: 5px;
     background-image: url("../imagenes/acuarela.png");
-    padding: 12px 18px;
+    padding: 15px 30px;
     font-size: 15px;
     font-family: honey;
     font-family: Arial, Helvetica, sans-serif;
@@ -306,9 +325,203 @@ main.main_nts section.sec_nts {
     font-family: museo;
     text-align: center; }
 
+/*-------GALERIA--------*/
+header.enc_galeria {
+  background-image: linear-gradient(#76d1d0, white); }
+  header.enc_galeria nav #MH {
+    color: #76d1d0;
+    font-size: 15px; }
+  header.enc_galeria nav #MHI {
+    color: #76d1d0; }
+  header.enc_galeria nav #CL {
+    color: black;
+    width: max-content;
+    margin-right: 25px; }
+  header.enc_galeria nav #CL:hover {
+    background-size: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-right: 5px;
+    background-image: url("../imagenes/acuarela.png");
+    padding: 15px 30px;
+    font-size: 15px;
+    font-family: honey;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: ease-out 0.5s;
+    text-shadow: black 3px 2px;
+    transform: scale(1.2);
+    color: white;
+    background-size: contain; }
+
+.main__galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  padding: 20px;
+  gap: 25px;
+  grid-auto-flow: dense; }
+  .main__galeria .galeria_item {
+    position: relative;
+    border-radius: 5px; }
+    .main__galeria .galeria_item .G1_img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      filter: grayscale(75%); }
+    .main__galeria .galeria_item .G1_img:hover {
+      transform: scale(1.1);
+      transition: ease-out 0.5s;
+      filter: grayscale(0%); }
+    .main__galeria .galeria_item h4 {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      color: aqua; }
+
+.A2 {
+  grid-column-start: span 2; }
+
+.L2 {
+  grid-row-start: span 2; }
+
+/*-------servicios--------*/
+header.enc_Ser {
+  background-image: linear-gradient(#76d1d0, white); }
+  header.enc_Ser nav #MH {
+    color: #76d1d0;
+    font-size: 15px; }
+  header.enc_Ser nav #MHI {
+    color: #76d1d0; }
+  header.enc_Ser nav #CL {
+    color: black;
+    width: max-content;
+    margin-right: 25px; }
+  header.enc_Ser nav #CL:hover {
+    background-size: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-right: 5px;
+    background-image: url("../imagenes/acuarela.png");
+    padding: 15px 30px;
+    font-size: 15px;
+    font-family: honey;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: ease-out 0.5s;
+    text-shadow: black 3px 2px;
+    transform: scale(1.2);
+    color: white;
+    background-size: contain; }
+
+main.main_ser .tarjetas {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  grid-auto-flow: dense;
+  padding: 20px 60px;
+  gap: 10px; }
+  main.main_ser .tarjetas .tarj {
+    width: 300px;
+    height: 350px;
+    justify-content: center;
+    background-color: #faf8f8;
+    border: solid black 1px;
+    border-radius: 3px;
+    box-shadow: rgba(128, 128, 128, 0.4) 8px 5px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    position: relative; }
+    main.main_ser .tarjetas .tarj .tarj-img {
+      width: 250px;
+      border-radius: 3px;
+      opacity: 0.9; }
+    main.main_ser .tarjetas .tarj .tarj-bt {
+      padding: 20px 5px;
+      background-color: #fbbdbc;
+      border-radius: 50%;
+      text-decoration: none;
+      color: black;
+      transition: all 0.3s;
+      position: absolute;
+      bottom: -15px;
+      right: -25px;
+      filter: grayscale(40%); }
+    main.main_ser .tarjetas .tarj .tarj-bt:hover {
+      transform: scale(1.2);
+      transition: ease-out 0.3s;
+      filter: grayscale(0%); }
+
+#carouselExampleCaptions {
+  z-index: 0;
+  top: 0;
+  width: 100%; }
+
+.enc_Ser {
+  position: relative; }
+
+.ancho {
+  width: 100%; }
+
+/*-----contacto-------------*/
+div#et__cont {
+  width: 400px;
+  height: 400px;
+  position: relative; }
+  div#et__cont div {
+    width: max-content;
+    height: max-content; }
+  div#et__cont .D1 {
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    box-shadow: #76d1d0 -10px 10px 5px; }
+  div#et__cont .D2 {
+    position: absolute;
+    left: 5%;
+    bottom: -18%;
+    box-shadow: #fbbdbc -10px 10px 5px; }
+  div#et__cont .D3 p {
+    background-image: url("../imagenes/r3.png");
+    background-repeat: no-repeat;
+    background-size: 200px 150px;
+    width: 200px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 18px; }
+
+img.et__img {
+  width: 230px;
+  border-radius: 3px; }
+
 /*--------------------------------*/
 @media screen and (min-width: 0px) and (max-width: 678px) {
   div#formu {
     flex-direction: column; }
   header.enc_nts {
-    background-size: 660px; } }
+    background-size: 660px; }
+  .main__galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px; }
+  .R1 {
+    grid-row-start: span 2;
+    grid-column-start: span 2; }
+  .R2 {
+    grid-row-start: span 2; }
+  .maxc {
+    height: 65rem; } }
+
+@media screen and (min-width: 0px) and (max-width: 678px) and (min-width: 0px) and (max-width: 480px) {
+  .main__galeria {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 200px;
+    justify-content: center; } }
